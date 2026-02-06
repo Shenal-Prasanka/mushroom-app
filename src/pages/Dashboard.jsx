@@ -70,7 +70,7 @@ const Dashboard = () => {
                     <button onClick={() => navigate('/inventory')} className="bg-white border border-gray-200 text-gray-700 px-4 py-2 hover:bg-gray-50 transition text-sm font-medium rounded-lg shadow-sm flex items-center gap-2">
                         Add Stock
                     </button>
-                    <button onClick={() => navigate('/pos')} className="bg-primary hover:bg-emerald-600 text-white px-4 py-2 rounded-lg transition text-sm font-medium shadow-lg shadow-emerald-500/30 flex items-center gap-2">
+                    <button onClick={() => navigate('/pos')} className="bg-primary hover:opacity-90 text-white px-4 py-2 rounded-lg transition text-sm font-medium shadow-lg flex items-center gap-2" style={{backgroundColor: '#10b981'}}>
                         New Sale
                     </button>
                 </div>

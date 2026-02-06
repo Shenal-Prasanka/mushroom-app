@@ -26,7 +26,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="flex bg-gray-100 dark:bg-gray-900 text-gray-800 h-screen overflow-hidden font-sans">
+      <div className="flex bg-light text-gray-800 h-screen overflow-hidden font-sans">
 
         {/* Mobile Sidebar Overlay */}
         {mobileMenuOpen && (
@@ -35,13 +35,13 @@ function App() {
 
         {/* Sidebar Container */}
         <div className={`fixed inset-y-0 left-0 z-40 transform transition-transform duration-300 md:relative md:translate-x-0 ${mobileMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
-          <Sidebar pendingCount={pendingCount} />
+          <Sidebar pendingCount={pendingCount} onClose={() => setMobileMenuOpen(false)} />
         </div>
 
         {/* Main Content */}
         <div className="flex-1 flex flex-col h-full overflow-hidden relative w-full">
           {/* Mobile Header */}
-          <header className="bg-white border-b h-16 flex items-center justify-between px-6 md:hidden flex-shrink-0">
+          <header className="bg-light border-b h-16 flex items-center justify-between px-6 md:hidden flex-shrink-0">
             <div className="flex items-center gap-3">
               <button onClick={() => setMobileMenuOpen(true)} className="text-gray-600 hover:text-dark">
                 <HiBars3 className="text-2xl" />

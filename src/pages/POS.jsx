@@ -102,8 +102,8 @@ const POS = () => {
     };
 
     return (
-        <div className="h-full flex flex-col md:flex-row gap-6 h-[calc(100vh-2rem)]">
-            <div className="flex-1 flex flex-col h-full overflow-hidden">
+        <div className="flex flex-col md:flex-row gap-6 md:h-[calc(100vh-2rem)]">
+            <div className="flex-1 flex flex-col md:h-full md:overflow-hidden">
                 <div className="mb-4">
                     <h2 className="text-2xl font-bold text-gray-800">Point of Sale</h2>
                 </div>
@@ -144,7 +144,7 @@ const POS = () => {
                                 <p className="text-xs text-gray-500 mb-3">{p.category || 'Mushroom Product'}</p>
                                 <div className="mt-auto flex justify-between items-center pt-3 border-t border-gray-50">
                                     <span className={`text-xs ${p.stock < 5 ? 'text-red-500 font-bold' : 'text-gray-400'}`}>{p.stock} in stock</span>
-                                    <button className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition shadow-lg shadow-emerald-500/30">
+                                    <button className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center transition shadow-lg shadow-emerald-500/30" style={{ backgroundColor: '#10b981' }}>
                                         <HiPlus />
                                     </button>
                                 </div>
@@ -249,7 +249,7 @@ const POS = () => {
                         </div>
                     )}
 
-                    <button onClick={handleCheckout} className="w-full py-4 bg-primary hover:bg-emerald-600 text-white font-bold rounded-xl shadow-lg shadow-emerald-500/30 transition flex justify-center items-center gap-2 group">
+                    <button onClick={handleCheckout} className="w-full py-4 bg-primary hover:opacity-90 text-white font-bold rounded-xl shadow-lg shadow-emerald-500/30 transition flex justify-center items-center gap-2 group" style={{ backgroundColor: '#10b981' }}>
                         <span>Complete Sale</span>
                         <HiShoppingCart className="group-hover:translate-x-1 transition" />
                     </button>

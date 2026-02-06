@@ -63,7 +63,7 @@ const Inventory = () => {
                     <h2 className="text-2xl font-bold text-gray-800">Inventory Management</h2>
                     <p className="text-gray-500 text-sm">Manage stock, prices, and sources</p>
                 </div>
-                <button onClick={handleAdd} className="bg-primary hover:bg-emerald-600 text-white px-5 py-2.5 rounded-xl shadow-lg shadow-emerald-500/30 transition flex items-center gap-2">
+                <button onClick={handleAdd} className="bg-primary hover:opacity-90 text-white px-5 py-2.5 rounded-xl shadow-lg shadow-emerald-500/30 transition flex items-center gap-2" style={{ backgroundColor: '#10b981' }}>
                     <HiPlus /> Add New Batch
                 </button>
             </div>
